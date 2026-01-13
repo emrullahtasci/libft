@@ -1,28 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/13 13:33:39 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/13 18:34:54 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/13 18:42:31 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/13 20:08:53 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_memset(void *s, int c, size_t n)
+#include <string.h>
+#include<stdio.h>
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*ptr;
+	size_t				i;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	ptr = (unsigned char *)s;
 	i = 0;
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
 	while (i < n)
 	{
-		ptr[i] = (unsigned char)c;
+		d[i] = s[i];
 		i++;
 	}
+	return (dest);
 }
 
+int	main(void)
+{
+	char	src[] = "ABC";
+	char	dest[4];
+	size_t	i;
+
+	i = 0;
+	ft_memcpy(dest, src, 4);
+	while (i < 4)
+	{
+		printf("dest[%zu] = %c\n", i, dest[i]);
+		i++;
+	}
+	return (0);
+}
