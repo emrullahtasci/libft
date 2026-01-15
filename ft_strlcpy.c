@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/13 17:57:24 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/15 15:26:27 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/15 16:39:43 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/15 19:46:44 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+size_t ft_strlcpy(char *dest, const char *src, size_t size  )
+{
+size_t size	i;
 
-# include <stddef.h>
-# include <stdlib.h>
+i = 0;
 
-void	ft_memset(void *s, int c, size_t n);
-void	*ft_memmove(void *dest, const void *src, size_t n);
-#endif
+if()
+{
+
+
+}
+}
