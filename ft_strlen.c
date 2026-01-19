@@ -26,6 +26,6 @@ int	main(void)
 	char	*s;
 
 	s = "merhaba";
-	printf("%d", ft_strlen(s));
+	printf("%zu", ft_strlen(s));
 
 }

@@ -45,7 +45,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 int	main(void)
 {
-	unsigned char dest[10] = "Abc";
+	unsigned char dest[2] = "Abc";
 
 	ft_memmove(dest + 1, dest, 3);
 	printf("%s\n", dest);

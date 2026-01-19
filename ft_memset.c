@@ -25,4 +25,11 @@ void	ft_memset(void *s, int c, size_t n)
 		i++;
 	}
 }
+int main(void)
+{
+	char str[10];
+	ft_memset(str,'A',9);
+	str[9]='\0';
+	printf("%s\n",str);
 
+}
