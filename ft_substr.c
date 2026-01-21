@@ -1,49 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 01:09:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/21 15:16:39 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/21 13:24:11 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/21 19:57:04 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include<stdio.h>
+#include "libft.h"
 #include <stdlib.h>
-char	*ft_strdup(const char *s)
-{
-	int		i;
-	int		size;
-	char	*dup;
 
-	size = 0;
-	while (s[size])
-	{
-		size++;
-	}
-	dup = (char *)malloc(sizeof(char) * (size +1));
-	if (!dup)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	size_t	i;
+	size_t	slen;
+	char	*p;
+
+	i = 0;
+	slen = ft_strlen(s);
+	if (!s)
 	{
 		return (NULL);
 	}
-	i = 0;
-	while (i < size)
+	p = malloc(len + 1);
+	if (!p)
+		return (NULL);
+	if (start > slen)
+		return (p);
+	while (s[start + i] && i < len)
 	{
-		dup[i] = s[i];
+		p[i] = s[start + i];
 		i++;
 	}
-	i++;
-	dup[i] = '\0';
-	return (dup);
+	p[i] = 0;
+	return (p);
 }
+#include <stdio.h>
+
 int	main(void)
 {
-	char *s;
-	s=ft_strdup("emre");
-	printf("%s\n", s);
-	free(s);
+	char	s[] = "emrullah";
+	char	*sub;
 
+	sub = ft_substr(s, 3, 4);
+	if (sub)
+	{
+		printf("%s\n", sub);
+		free(sub);
+	}
+	return (0);
 }
