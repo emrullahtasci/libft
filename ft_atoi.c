@@ -1,36 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/18 13:48:15 by emrullah          #+#    #+#             */
-/*   Updated: 2026/01/19 16:23:44 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/20 01:07:53 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/20 01:07:54 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-char	*ft_strrchr(const char *s, int c)
-{
-	char	*last;
 
-	last = NULL;
-	while (*s)
+#include <stdlib.h>
+
+int	ft_atoi(const char *nptr)
+{
+	int	i;
+	int	sign;
+	int	result;
+
+	i = 0;
+	sign = 1;
+	result = 0;
+	while (nptr[i] == ' ' || (nptr[i] >= 0 && nptr[i] <= 13))
 	{
-		if (*s == (char)c)
-			last = (char *)s;
-		s++;
+		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (last);
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		i++;
+	}
+	if ('-')
+	{
+		sign = -1;
+	}
+	while (nptr[i] >= 9 && nptr[i] <= 13)
+	{
+		result = result * 10 + (nptr[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }
 #include <stdio.h>
 
 int	main(void)
 {
-	char	s[] = "Emrullah";
+	char	nptr[] = "  1emre";
 
-	printf("%s\n", ft_strrchr(s, 'a'));
+	printf("%d\n", ft_atoi(nptr));
+	return (0);
 }

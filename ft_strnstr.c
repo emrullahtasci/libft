@@ -1,40 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/18 21:26:27 by emrullah          #+#    #+#             */
-/*   Updated: 2026/01/20 01:04:51 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/20 03:34:10 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/21 00:14:06 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-void	*ft_memchr(const void *s, int c, size_t n)
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t			i;
-	unsigned char	*p;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	p = (unsigned char *)s;
-	while (i < n)
+	if (little[0] == '\0')
 	{
-		if (p[i] == (unsigned char)c)
-		{
-			return (p + i);
-		}
+		return ((char *)big);
+	}
+	while (big[i] && i < len)
+	{
+		j = 0;
+		while (little[j])
+			&&big[i + j] && i + j < len &&big[i + j] == little[j]
+			{
+				j++;
+			}
+		if (little[j] == '\0')
+			return ((char *)(big + i));
 		i++;
 	}
 	return (NULL);
 }
-
 #include <stdio.h>
 
 int	main(void)
 {
-	char	s[] = "merhaba";
-	char	*p;
+	const char	*big = "merhaba dunya";
+	const char	*little = "dunya";
+	char		*result;
 
-	p = ft_memchr(s, 'h', 7);
+	result = ft_strnstr(big, little, 20);
 }

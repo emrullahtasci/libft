@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:21:12 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/11 20:00:14 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/21 02:02:19 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,9 @@ size_t	ft_strlen(const char *s)
 
 	i = 0;
 	while (s[i] != '\0')
+	{
 		i++;
-	return ((int)i);
+	}
+	return (i);
 }
-int	main(void)
-{
-	char	*s;
 
-	s = "merhaba";
-	printf("%zu", ft_strlen(s));
-
-}

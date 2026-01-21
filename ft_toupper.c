@@ -3,25 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 01:18:09 by emrullah          #+#    #+#             */
-/*   Updated: 2026/01/19 14:25:24 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/01/19 16:23:51 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-int ft_toupper(int c)
+#include <stdio.h>
+
+int	ft_toupper(int c)
 {
-    if(c>='a' && c<='z')
-    {
-        return(c - 32);
-    }
-    return(c);
+	if (c >= 'a' && c <= 'z')
+	{
+		return (c - 32);
+	}
+	return (c);
 }
 
-int main()
+int	main(void)
 {
-    char c='A';
-    printf("%c",ft_toupper(c));
+	char	c;
+
+	c = 'A';
+	printf("%c", ft_toupper(c));
 }

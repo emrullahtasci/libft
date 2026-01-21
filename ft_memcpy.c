@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 18:42:31 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/15 13:33:42 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/20 23:01:50 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
 int	main(void)
 {
 	char	src[] = "ABC";
 	char	dest[4];
-	size_t	i;
 
-	i = 0;
 	ft_memcpy(dest, src, 4);
-	while (i < 4)
-	{
-		printf("dest[%zu] = %c\n", i, dest[i]);
-		i++;
-	}
+	printf("%s\n", dest);
 	return (0);
 }

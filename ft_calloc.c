@@ -1,42 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/13 16:40:47 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/20 22:51:07 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/19 23:31:20 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/20 01:07:24 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t			i;
-	unsigned char	*ptr;
+	size_t	i;
+	size_t	toplam;
+	char	*p;
 
 	i = 0;
-	ptr = (unsigned char *)s;
-	while (i < n)
+	toplam = nmemb * size;
+	p = (char *)malloc(toplam);
+	if (!p)
 	{
-		ptr[i] = 0;
+		return (NULL);
+	}
+	while (i < toplam)
+	{
+		p[i] = 0;
 		i++;
 	}
+	return ((void *)p);
 }
+
+#include <stdio.h>
+
 int	main(void)
 {
-	int	name[] = {2, 327680, 2};
-	int	i;
+	char	*p;
 
-	ft_bzero(name, 7);
-	i = 0;
-	while (i < 3)
-	{
-		printf("%d \n", name[i]);
-		i++;
-	}
+	p = (char *)ft_calloc(sizeof(char), 5);
+	printf("%c", *p);
 }

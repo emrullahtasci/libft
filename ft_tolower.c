@@ -3,25 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 01:31:24 by emrullah          #+#    #+#             */
-/*   Updated: 2026/01/19 14:29:58 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/01/19 16:23:47 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<ctype.h>
-int ft_tolower(int c)
+#include <ctype.h>
+
+int	ft_tolower(int c)
 {
-    if(c>='A' && c <='Z')
-    {
-    return(c+32);
-    }
-    return(c);
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (c + 32);
+	}
+	return (c);
 }
 
-int main()
+int	main(void)
 {
-    char c='A';
-    printf("%c",ft_toupper(c));
+	char	c;
+
+	c = 'A';
+	printf("%c", ft_toupper(c));
 }

@@ -1,42 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/13 16:40:47 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/20 22:51:07 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/20 01:09:44 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/20 03:30:41 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
 #include <string.h>
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t			i;
-	unsigned char	*ptr;
+	int		i;
+	int		size;
+	char	*dup;
 
-	i = 0;
-	ptr = (unsigned char *)s;
-	while (i < n)
+	size = 0;
+	while (s[size])
 	{
-		ptr[i] = 0;
+		size++;
+	}
+	dup = (char *)malloc(sizeof(char) * (size +1));
+	if (!dup)
+	{
+		return (NULL);
+	}
+	i = 0;
+	while (i < size)
+	{
+		dup[i] = s[i];
 		i++;
 	}
+	i++;
+	dup[i] = '\0';
+	return(dup);
 }
 int	main(void)
 {
-	int	name[] = {2, 327680, 2};
-	int	i;
+	char *s;
+	s=ft_strdup("emre");
+	printf("%s\n", s);
 
-	ft_bzero(name, 7);
-	i = 0;
-	while (i < 3)
-	{
-		printf("%d \n", name[i]);
-		i++;
-	}
 }

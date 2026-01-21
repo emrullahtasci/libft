@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 17:46:33 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/11 18:04:09 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/20 20:51:14 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,22 @@
 
 int	ft_isalpha(int x)
 {
-	if ((x >= 'A' && x <= 'Z') || (x >= 'a' && x <= 'z' || x >= '0'
+	if ((x >= 'A' && x <= 'Z') || (x >= 'a' && x <= 'z') || (x >= '0'
 			&& x <= '9'))
-	{
-		return (0);
-	}
-	else
 	{
 		return (1);
 	}
+	else
+	{
+		return (0);
+	}
+
 }
 
 int	main(void)
 {
 	int	a;
 
-	a = '43';
-	printf("%d", ft_isalpha('A'));
+	a = 'b';
+	printf("%d", ft_isalpha('a'));
 }

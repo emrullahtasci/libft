@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 13:33:39 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/13 18:34:54 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/20 21:54:55 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,17 @@ void	ft_memset(void *s, int c, size_t n)
 		i++;
 	}
 }
-int main(void)
-{
-	char str[10];
-	ft_memset(str,'A',9);
-	str[9]='\0';
-	printf("%s\n",str);
 
+int	main(void)
+{
+	int	str[] = {674821, 23, 12, 123};
+	int	i;
+
+	ft_memset(str, 5, 2);
+	i = 0;
+	while (i <= 3)
+	{
+		printf("%d \n", str[i]);
+		i++;
+	}
 }

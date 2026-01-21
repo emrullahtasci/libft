@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 18:11:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/11 18:31:07 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/20 20:56:46 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int	ft_isascii(int x)
 }
 int	main(void)
 {
-	printf("%d", ft_isascii('!'));
+	printf("%d", ft_isascii('a'));
 }
+
