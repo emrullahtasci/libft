@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 01:31:24 by emrullah          #+#    #+#             */
-/*   Updated: 2026/01/19 16:23:47 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/23 19:21:41 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,4 @@ int	ft_tolower(int c)
 		return (c + 32);
 	}
 	return (c);
-}
-
-int	main(void)
-{
-	char	c;
-
-	c = 'A';
-	printf("%c", ft_toupper(c));
 }

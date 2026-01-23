@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putendl.fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/18 17:34:34 by emrullah          #+#    #+#             */
-/*   Updated: 2026/01/23 19:20:41 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/23 08:46:01 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/23 09:32:57 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <unistd.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
+	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
-	while (i < n && s1[i] && s2[i])
+	while (s[i])
 	{
-		if (s1[i] != s2[i])
-		{
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		}
+		write(fd, &s[i], 1);
 		i++;
 	}
+	write(fd, "\n", 1);
+}
+int	main(void)
+{
+	ft_putendl_fd("34", 1);
+	write(1, "\n", 1);
+	ft_putendl_fd("Merhaba", 1);
 	return (0);
 }

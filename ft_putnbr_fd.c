@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/18 17:34:34 by emrullah          #+#    #+#             */
-/*   Updated: 2026/01/23 19:20:41 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/23 08:24:55 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/23 08:42:21 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <unistd.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
+	char	c;
 
-	i = 0;
-	while (i < n && s1[i] && s2[i])
+	if (n < 0)
 	{
-		if (s1[i] != s2[i])
-		{
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		}
-		i++;
+		write(fd, "-", 1);
+		n = -n;
 	}
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	c = (n % 10) + '0';
+	write(fd, &c, 1);
+}
+
+int	main(void)
+{
+	ft_putnbr_fd(44, 1);
+	write(1, "\n", 1);
 	return (0);
 }

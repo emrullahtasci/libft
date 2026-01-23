@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/18 17:34:34 by emrullah          #+#    #+#             */
-/*   Updated: 2026/01/23 19:20:41 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/23 09:35:31 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/23 10:16:17 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <unistd.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putchar_fd(char c, char fd)
 {
-	size_t	i;
+	write(fd, &c, 1);
+}
 
-	i = 0;
-	while (i < n && s1[i] && s2[i])
-	{
-		if (s1[i] != s2[i])
-		{
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		}
-		i++;
-	}
+int	main(void)
+{
+	ft_putchar_fd('A', 1);
+	ft_putchar_fd('i', 1);
+	ft_putchar_fd('\n', 1);
 	return (0);
 }
