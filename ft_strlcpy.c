@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 16:39:43 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/21 02:22:22 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/24 13:58:43 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	{
 		return (ft_strlen(src));
 	}
-	while (src[i] && i < size - 1) // \0 ile biter string!!
+	while (src[i] && i < size - 1) // \0 ile biter string!
 	{
 		dest[i] = src[i];
 		i++;

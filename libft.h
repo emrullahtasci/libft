@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 17:57:24 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/23 19:51:12 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/25 17:48:01 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-
+char	*ft_itoa(int n);
+char	**ft_split(const char *s, char c);
 #endif
