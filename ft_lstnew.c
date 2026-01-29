@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 01:09:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/29 19:59:55 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/29 13:55:37 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/29 21:39:14 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include<stdio.h>
-#include <stdlib.h>
-char	*ft_strdup(const char *s)
-{
-	int		i;
-	int		size;
-	char	*dup;
+#include "libft.h"
 
-	size = 0;
-	while (s[size])
-	{
-		size++;
-	}
-	dup = (char *)malloc(sizeof(char) * (size +1));
-	if (!dup)
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*node;
+
+	node = malloc(sizeof(t_list));
+	if (!node)
 	{
 		return (NULL);
 	}
-	i = 0;
-	while (i < size)
-	{
-		dup[i] = s[i];
-		i++;
-	}
-	i++;
-	dup[i] = '\0';
-	return (dup);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
 

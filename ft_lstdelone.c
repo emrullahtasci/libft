@@ -1,42 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 01:09:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/29 19:59:55 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/30 01:47:30 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/30 02:00:33 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include<stdio.h>
-#include <stdlib.h>
-char	*ft_strdup(const char *s)
+#include "libft.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	int		i;
-	int		size;
-	char	*dup;
-
-	size = 0;
-	while (s[size])
-	{
-		size++;
-	}
-	dup = (char *)malloc(sizeof(char) * (size +1));
-	if (!dup)
-	{
+	if (!lst || !del)
 		return (NULL);
-	}
-	i = 0;
-	while (i < size)
-	{
-		dup[i] = s[i];
-		i++;
-	}
-	i++;
-	dup[i] = '\0';
-	return (dup);
+	del(lst->content);
+	free(lst);
 }
-

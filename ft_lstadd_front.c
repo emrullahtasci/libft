@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 01:09:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/29 19:59:55 by etasci           ###   ########.fr       */
+/*   Created: 2026/01/29 15:32:34 by etasci            #+#    #+#             */
+/*   Updated: 2026/01/30 02:38:44 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include<stdio.h>
-#include <stdlib.h>
-char	*ft_strdup(const char *s)
-{
-	int		i;
-	int		size;
-	char	*dup;
+#include "libft.h"
 
-	size = 0;
-	while (s[size])
-	{
-		size++;
-	}
-	dup = (char *)malloc(sizeof(char) * (size +1));
-	if (!dup)
-	{
-		return (NULL);
-	}
-	i = 0;
-	while (i < size)
-	{
-		dup[i] = s[i];
-		i++;
-	}
-	i++;
-	dup[i] = '\0';
-	return (dup);
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (!new || !lst)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
+
+#include <stdio.h>
+
 
