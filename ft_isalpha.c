@@ -6,23 +6,15 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 17:30:42 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/11 18:00:36 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 22:10:39 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isalpha(int x)
 {
 	if ((x >= 'A' && x <= 'Z') || (x >= 'a' && x <= 'z'))
+	{
 		return (0);
+	}
 	return (1);
-}
-
-int	main(void)
-{
-	char	a;
-
-	a = 'A';
-	printf("%d", a);
 }

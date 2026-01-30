@@ -6,11 +6,9 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 18:11:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/20 20:56:46 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 20:02:53 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isascii(int x)
 {
@@ -23,8 +21,3 @@ int	ft_isascii(int x)
 		return (0);
 	}
 }
-int	main(void)
-{
-	printf("%d", ft_isascii('a'));
-}
-

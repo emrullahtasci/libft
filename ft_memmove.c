@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 15:24:36 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/21 01:14:20 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 19:42:19 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,4 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-#include <stdio.h>
 
-int	main(void)
-{
-	char	str[20] = "ABCDE";
-
-	ft_memmove(str + 2, str, 3);
-	printf("%s\n", str);
-	return (0);
-}

@@ -6,12 +6,12 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 12:11:32 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/23 15:23:02 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 21:49:33 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdlib.h>
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
@@ -30,16 +30,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
 	return (ft_substr(s1, start, end - start));
-}
-#include<stdio.h>
-int	main(void)
-{
-	char	s[] = "_poyraz_";
-	char	set[] = "_";
-	char	*trim;
-
-	trim = ft_strtrim(s, set);
-	printf("%s\n", trim);
-	free(trim);
-	return (0);
 }

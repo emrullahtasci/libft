@@ -6,12 +6,11 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 01:07:53 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/20 01:07:54 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 20:01:36 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -40,13 +39,4 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	return (result * sign);
-}
-#include <stdio.h>
-
-int	main(void)
-{
-	char	nptr[] = "  1emre";
-
-	printf("%d\n", ft_atoi(nptr));
-	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 23:31:20 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/20 01:07:24 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 20:02:10 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -31,14 +31,4 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		i++;
 	}
 	return ((void *)p);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*p;
-
-	p = (char *)ft_calloc(sizeof(char), 5);
-	printf("%c", *p);
 }

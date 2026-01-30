@@ -6,13 +6,12 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 01:09:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/29 19:59:55 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 20:08:31 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include<stdio.h>
-#include <stdlib.h>
+#include "libft.h"
+
 char	*ft_strdup(const char *s)
 {
 	int		i;
@@ -24,7 +23,7 @@ char	*ft_strdup(const char *s)
 	{
 		size++;
 	}
-	dup = (char *)malloc(sizeof(char) * (size +1));
+	dup = (char *)malloc(sizeof(char) * (size + 1));
 	if (!dup)
 	{
 		return (NULL);
@@ -39,4 +38,3 @@ char	*ft_strdup(const char *s)
 	dup[i] = '\0';
 	return (dup);
 }
-

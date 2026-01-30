@@ -6,11 +6,9 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:08:31 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/20 01:05:46 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 20:03:12 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isprint(int i)
 {
@@ -22,8 +20,4 @@ int	ft_isprint(int i)
 	{
 		return (0);
 	}
-}
-int	main(void)
-{
-	printf("%d", ft_isprint(12));
 }

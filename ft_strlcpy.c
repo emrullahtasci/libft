@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 16:39:43 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/24 13:58:43 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 19:46:24 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,4 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (ft_strlen(dest));
 }
-#include <stdio.h>
 
-int	main(void)
-{
-	char	dest[10];
-	char	src[] = "selam";
-
-	ft_strlcpy(dest, src, 10);
-	printf("%s\n", dest);
-}

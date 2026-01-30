@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 03:34:10 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/23 19:21:22 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 21:48:57 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,4 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		i++;
 	}
 	return (NULL);
-}
-#include <stdio.h>
-
-int	main(void)
-{
-	const char	*big = "merhaba dunya";
-	const char	*little = "dunya";
-	char		*result;
-
-	result = ft_strnstr(big, little, 20);
 }

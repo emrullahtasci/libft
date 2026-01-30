@@ -6,11 +6,11 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 01:31:24 by emrullah          #+#    #+#             */
-/*   Updated: 2026/01/23 19:21:41 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 21:49:13 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

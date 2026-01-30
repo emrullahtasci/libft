@@ -6,11 +6,11 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 16:07:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/25 17:54:04 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 20:03:29 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	num_len(long n)
 {
@@ -51,21 +51,6 @@ char	*ft_itoa(int n)
 	if (n < 10)
 	{
 		res[0] = '-';
-
 	}
 	return (res);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*s;
-
-	s = ft_itoa(42);
-	printf("42    -> %s\n", s);
-	free(s);
-	s = ft_itoa(-123);
-	printf("-123  -> %s\n", s);
-	free(s);
 }

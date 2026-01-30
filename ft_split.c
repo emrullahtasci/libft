@@ -6,9 +6,11 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 14:00:05 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/25 16:07:09 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 20:07:33 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	word_count(char const *s, char c)
 {
@@ -27,9 +29,6 @@ static int	word_count(char const *s, char c)
 	}
 	return (count);
 }
-#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 char	**ft_split(const char *s, char c)
 {
@@ -48,36 +47,12 @@ char	**ft_split(const char *s, char c)
 	while (s[i])
 	{
 		if (s[i] != c)
-		{
 			start = i;
-			while (s[i] && s[i] != c)
-				i++;
-			res[j++] = ft_substr(s, start, i - start);
-		}
-		else
+		while (s[i] && s[i] != c)
 			i++;
+		res[j++] = ft_substr(s, start, i - start);
+		i++;
 	}
 	res[j] = NULL;
 	return (res);
-}
-
-int	main(void)
-{
-	char	*s;
-	char	**res;
-	int		i;
-
-	s = "111emrullahdtsc111";
-	res = ft_split(s, '1');
-	if (!res)
-		return (1);
-	i = 0;
-	while (res[i])
-	{
-		printf("word[%d]: %s\n", i, res[i]);
-		free(res[i]);
-		i++;
-	}
-	free(res);
-	return (0);
 }

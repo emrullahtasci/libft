@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 08:46:01 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/23 09:32:57 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 20:06:01 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -25,11 +25,4 @@ void	ft_putendl_fd(char *s, int fd)
 		i++;
 	}
 	write(fd, "\n", 1);
-}
-int	main(void)
-{
-	ft_putendl_fd("34", 1);
-	write(1, "\n", 1);
-	ft_putendl_fd("Merhaba", 1);
-	return (0);
 }

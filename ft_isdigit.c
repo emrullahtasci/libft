@@ -6,11 +6,9 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 17:17:48 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/20 20:52:16 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 20:03:02 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isdigit(int a)
 {
@@ -22,12 +20,4 @@ int	ft_isdigit(int a)
 	{
 		return (0);
 	}
-}
-
-int	main(void)
-{
-	int	a;
-
-	a = 'A';
-	printf("%d", ft_isdigit(a));
 }

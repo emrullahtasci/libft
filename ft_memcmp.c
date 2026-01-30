@@ -6,11 +6,11 @@
 /*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 13:04:52 by emrullah          #+#    #+#             */
-/*   Updated: 2026/01/19 20:30:22 by etasci           ###   ########.fr       */
+/*   Updated: 2026/01/30 20:04:37 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -30,13 +30,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	}
 	return (0);
-}
-#include <stdio.h>
-
-int	main(void)
-{
-	char	c[] = "emre";
-	char	p[] = "emru";
-
-	printf("%d\n", ft_memcmp(c, p, 3));
 }
