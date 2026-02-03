@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 16:07:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/30 20:03:29 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/04 00:22:35 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include<stdlib.h>
+#include"libft.h"
 
 static int	num_len(long n)
 {
@@ -39,18 +40,18 @@ char	*ft_itoa(int n)
 	if (!res)
 		return (NULL);
 	res[len] = '\0';
+	if (nbr == 0)
+		res[0] = '0';
 	if (nbr < 0)
 	{
+		res[0] = '-';
 		nbr = -nbr;
 	}
-	while (len--)
+	while (nbr > 0)
 	{
-		res[len] = (nbr % 10) + '0';
+		res[--len] = (nbr % 10) + '0';
 		nbr = nbr / 10;
-	}
-	if (n < 10)
-	{
-		res[0] = '-';
 	}
 	return (res);
 }
+

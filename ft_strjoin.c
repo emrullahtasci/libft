@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 19:52:49 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/03 00:30:13 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/02/03 19:04:02 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -37,11 +38,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	p[i + j] = '\0';
 	return (p);
-}
-int main()
-{
-	char s1[]="selam";
-	char *s2="emrullah";
-	char *join=ft_strjoin(s1,s2);
-	printf("%s",join);
 }

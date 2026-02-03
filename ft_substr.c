@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 13:24:11 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/02 23:56:19 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/02/03 22:12:03 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -37,12 +38,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	p[i] = '\0';
 	return (p);
 }
-int main()
-{
-	char metin[]= "merhaba";
-	char *kopya =
-	kopya = ft_substr(metin,2,2);
-	printf("%s",kopya);
-	
 
-}
+

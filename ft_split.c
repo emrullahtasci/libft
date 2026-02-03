@@ -3,56 +3,87 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/24 14:00:05 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/30 20:07:33 by etasci           ###   ########.fr       */
+/*   Created: 2026/02/03 21:20:31 by etasci            #+#    #+#             */
+/*   Updated: 2026/02/03 23:41:38 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	word_count(char const *s, char c)
+static size_t	count_words(const char *s, char c)
 {
-	int	count;
-	int	i;
+	size_t	i;
+	size_t	count;
 
-	count = 0;
 	i = 0;
+	count = 0;
 	while (s[i])
 	{
-		if (s[i] != c && (i == 0 || s[i - 1] == c))
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i])
 		{
 			count++;
+			while (s[i] && s[i] != c)
+				i++;
 		}
-		i++;
 	}
 	return (count);
 }
 
-char	**ft_split(const char *s, char c)
+static char	**free_all(char **tab, size_t i)
 {
-	char	**res;
-	int		i;
-	int		j;
-	int		start;
+	size_t	j;
 
-	if (!s)
-		return (NULL);
-	res = malloc(sizeof(char *) * (word_count(s, c) + 1));
-	if (!res)
-		return (NULL);
+	j = 0;
+	while (j < i)
+	{
+		free(tab[j]);
+		j++;
+	}
+	free(tab);
+	return (NULL);
+}
+static int	func(const char *s, char **tab, char c)
+{
+	size_t	i;
+	size_t	j;
+	size_t	start;
+
 	i = 0;
 	j = 0;
 	while (s[i])
 	{
-		if (s[i] != c)
-			start = i;
-		while (s[i] && s[i] != c)
+		while (s[i] && s[i] == c)
 			i++;
-		res[j++] = ft_substr(s, start, i - start);
-		i++;
+		if (s[i])
+		{
+			start = i;
+			while (s[i] && s[i] != c)
+				i++;
+			tab[j] = ft_substr(s, start, i - start);
+			if (!tab[j])
+				return (0);
+			j++;
+		}
 	}
-	res[j] = NULL;
-	return (res);
+	tab[j] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**tab;
+	size_t	start;
+
+	if (!s)
+		return (NULL);
+	tab = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!tab)
+		return (NULL);
+	if (!func(s, tab, c))
+		return (NULL);
+	return (tab);
 }

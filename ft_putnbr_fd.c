@@ -3,26 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 08:24:55 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/30 20:06:31 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/03 23:01:00 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	c;
+	char		c;
+	long int	num;
 
-	if (n < 0)
+	num = n;
+	if (num < 0)
 	{
 		write(fd, "-", 1);
-		n = -n;
+		num = -num;
 	}
-	if (n >= 10)
-		ft_putnbr_fd(n / 10, fd);
-	c = (n % 10) + '0';
+	if (num >= 10)
+		ft_putnbr_fd(num / 10, fd);
+	c = (num % 10) + '0';
 	write(fd, &c, 1);
 }

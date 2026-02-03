@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 01:47:45 by emrullah          #+#    #+#             */
-/*   Updated: 2026/02/03 10:59:46 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/02/03 19:03:57 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,4 @@ char	*ft_strchr(const char *s, int c)
 	if (*s == (char)c)
 		return ((char *)s);
 	return (NULL);
-}
-int main(void)
-{
-    char *str = "uskudar";
-    
-   
-    printf("Arama 'I': %s\n", ft_strchr(str, 'u'));
 }

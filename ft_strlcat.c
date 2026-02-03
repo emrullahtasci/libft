@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 14:28:42 by emrullah          #+#    #+#             */
-/*   Updated: 2026/02/03 10:16:05 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/02/03 19:04:04 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	dst[d_len + i] = '\0';
 	return (d_len + s_len);
-}
-#include <stdio.h>
-
-int	main(void)
-{
-	char	dst[6] = "mer";
-	char	src[] = "haba";
-
-	ft_strlcat(dst, src, sizeof(dst));
-	printf("%s\n", dst);
-	return (0);
 }
