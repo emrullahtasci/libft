@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 13:48:15 by emrullah          #+#    #+#             */
-/*   Updated: 2026/01/30 19:46:46 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/03 11:00:37 by emrullah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*last;
@@ -22,8 +23,12 @@ char	*ft_strrchr(const char *s, int c)
 			last = (char *)s;
 		s++;
 	}
-	if ((char)c == '\0')
+	if (*s == (char)c)
 		return ((char *)s);
 	return (last);
 }
-
+int main()
+{
+	char *s="uskudar";
+	printf("%s",ft_strrchr(s,'u'));
+}

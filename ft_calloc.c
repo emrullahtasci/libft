@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 23:31:20 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/30 20:02:10 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/02 16:56:51 by emrullah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,34 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
-	size_t	toplam;
-	char	*p;
+	void	*p;
+	size_t	total_size;
 
-	i = 0;
-	toplam = nmemb * size;
-	p = (char *)malloc(toplam);
+	if (nmemb != 0 && size > (size_t)-1 / nmemb)
+		return (NULL);
+	
+	total_size = nmemb * size;
+	
+	p = malloc(total_size);
 	if (!p)
 	{
 		return (NULL);
 	}
-	while (i < toplam)
+	
+	ft_bzero(p, total_size);
+		return (p);
+}
+
+int main()
+{
+	char *p;
+	p = (ft_calloc(1,1));
+	if(p)
 	{
-		p[i] = 0;
-		i++;
+		p[0]='4';
+		p[1]='2';
+		printf("%s",p[0],p[1]);
+		free(p);
 	}
-	return ((void *)p);
+	
 }

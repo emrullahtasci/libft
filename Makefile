@@ -31,6 +31,7 @@ SRC	=	ft_atoi.c \
 		ft_strncmp.c \
 		ft_strnstr.c \
 		ft_strrchr.c \
+		ft_split.c \
 		ft_strtrim.c \
 		ft_substr.c \
 		ft_tolower.c \
@@ -62,5 +63,4 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: all, clean, fclean, re
+.PHONY: all clean fclean re

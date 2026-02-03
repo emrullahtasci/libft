@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 13:33:39 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/30 21:52:58 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/01 21:41:05 by emrullah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memset(void *s, int c, size_t n)
 		ptr[i] = (unsigned char)c;
 		i++;
 	}
-	return (ptr);
+	return (s);
 }

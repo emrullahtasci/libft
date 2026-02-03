@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 03:34:10 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/30 21:48:57 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/03 14:11:20 by emrullah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		i++;
 	}
 	return (NULL);
+}
+#include<stdio.h>
+int main()
+{
+	char *big="42 selam";
+	char *little="sel";
+	char *result;
+
+	result=ft_strnstr(big,little,14);
+	printf("%s",result);
+
+
 }

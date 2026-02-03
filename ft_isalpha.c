@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 17:30:42 by etasci            #+#    #+#             */
-/*   Updated: 2026/01/30 22:10:39 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/01 19:04:11 by emrullah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 int	ft_isalpha(int x)
 {
 	if ((x >= 'A' && x <= 'Z') || (x >= 'a' && x <= 'z'))
 	{
-		return (0);
+		return (1);
 	}
-	return (1);
+	return (0);
 }
