@@ -6,11 +6,11 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 21:26:27 by emrullah          #+#    #+#             */
-/*   Updated: 2026/02/03 19:03:38 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/07 14:14:34 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

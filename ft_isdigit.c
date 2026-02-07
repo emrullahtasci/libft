@@ -6,18 +6,14 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 17:17:48 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/03 19:03:16 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/07 12:43:30 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int a)
 {
 	if (a >= '0' && a <= '9')
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }

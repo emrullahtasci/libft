@@ -6,11 +6,11 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 03:34:10 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/04 00:04:01 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/07 16:21:41 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stddef.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

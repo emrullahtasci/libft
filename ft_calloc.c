@@ -6,12 +6,12 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 23:31:20 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/04 00:30:49 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/07 14:22:41 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

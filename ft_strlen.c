@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:21:12 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/03 22:11:36 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/07 16:21:04 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-
-

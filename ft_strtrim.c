@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 12:11:32 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/05 01:14:14 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/02/07 14:32:14 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	start = 0;
 	end = ft_strlen(s1);
-	
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
 	if (start == end)

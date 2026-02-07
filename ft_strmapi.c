@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 17:52:25 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/05 16:01:30 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/02/07 22:31:20 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,26 +33,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	new[i] = '\0';
 	return (new);
-}
-
-#include <stdio.h>
-#include <ctype.h>
-
-char	ft_test(unsigned int i, char c)
-{
-	if(i%2==0 && c<='z' && c>='a')
-	{
-		return(c - 32);
-		
-	}
-	return(c);
-
-}
-
-int main()
-{
-	char	*s="emrullah";
-	char	*result= ft_strmapi(s,ft_test);
-	printf("%s",result);
-	free(result);
 }

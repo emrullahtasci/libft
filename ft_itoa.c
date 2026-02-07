@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 16:07:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/05 15:07:42 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/02/07 14:34:14 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
-#include"libft.h"
 
 static int	num_len(long n)
 {
@@ -53,13 +53,4 @@ char	*ft_itoa(int n)
 		nbr /= 10;
 	}
 	return (res);
-}
-#include<stdio.h>
-int	main(void)
-{
-	char	*res;
-	
-	res = ft_itoa(-1542);
-	printf(" %s\n", res);
-	free(res);
 }

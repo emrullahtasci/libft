@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 21:20:31 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/05 15:18:20 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/02/07 22:30:46 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,28 +80,4 @@ char	**ft_split(char const *s, char c)
 	if (!tab)
 		return (NULL);
 	return (fill_tab(s, c, tab));
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-    char	**table;
-	int	i;
-	table=ft_split("--emrulah",'-');
-	if(!table)
-	{
-		return(1);
-	}
-	i=0;
-	while(table[i])
-	{
-		printf("%s",table[i]);
-		free(table[i]);
-		i++;
-
-	}
-	free(table);
-	return (0);
-	
 }

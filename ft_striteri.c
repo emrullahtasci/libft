@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:03:20 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/05 16:35:17 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/02/07 22:31:04 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 #include <stdlib.h>
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t	i;
@@ -25,21 +26,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-#include<stdio.h>
-void	ft_test(unsigned int i, char *c)
-{
-	if (i % 2 == 0 && *c <= 'z' && *c >= 'a')
-    {
-        *c = *c - 32; 
-    }
-}
-
-int main()
-{
-	char s[]="Emrullah";
-	ft_striteri(s,ft_test);
-	printf("%s",s);
-	return(0);
-}
-
-
