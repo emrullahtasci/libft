@@ -3,26 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 12:11:32 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/03 20:19:40 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/05 01:14:14 by emrullah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
 
-	start = 0;
-	end = ft_strlen(s1);
 	if (!s1 || !set)
 	{
-		return ("NULL");
+		return (NULL);
 	}
+	start = 0;
+	end = ft_strlen(s1);
+	
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
 	if (start == end)
@@ -30,4 +32,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
 	return (ft_substr(s1, start, end - start));
+}
+#include<stdio.h>
+int main()
+{
+	char	*s1="--gs--";
+	char	set[]="--";
+	char	*p;
+	p=ft_strtrim(s1,set);
+	printf("%s",p);
+
+
 }

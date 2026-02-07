@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 19:52:49 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/03 19:04:02 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/05 01:05:50 by emrullah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	p[i + j] = '\0';
 	return (p);
+}
+#include<stdio.h>
+int main()
+{
+	char	s1[]="emrullah ";
+	char	s2[]="taşcı";
+	char	*p;
+	p=ft_strjoin(s1,s2);
+	printf("%s",p);
+
 }

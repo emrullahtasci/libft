@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 21:26:06 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/03 22:14:13 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/06 16:37:39 by emrullah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
+
+
 
 
