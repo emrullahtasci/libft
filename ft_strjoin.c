@@ -39,13 +39,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	p[i + j] = '\0';
 	return (p);
 }
-#include<stdio.h>
-int main()
-{
-	char	s1[]="emrullah ";
-	char	s2[]="taşcı";
-	char	*p;
-	p=ft_strjoin(s1,s2);
-	printf("%s",p);
 
-}

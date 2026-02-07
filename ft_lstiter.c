@@ -37,12 +37,12 @@ int	main(void)
 {
 	t_list *liste = NULL;
 
-	// Listeyi kuralım
+	
 	ft_lstadd_back(&liste, ft_lstnew("Karpuz"));
 	ft_lstadd_back(&liste, ft_lstnew("Kavun"));
 	ft_lstadd_back(&liste, ft_lstnew("Cilek"));
 
-	// KOMUT: Hepsini ekrana bas!
+	
 	printf("--- Liste Geziliyor ---\n");
 	ft_lstiter(liste, print_content);
 

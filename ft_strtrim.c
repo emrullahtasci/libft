@@ -33,14 +33,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, end - start));
 }
-#include<stdio.h>
-int main()
-{
-	char	*s1="--gs--";
-	char	set[]="--";
-	char	*p;
-	p=ft_strtrim(s1,set);
-	printf("%s",p);
-
-
-}

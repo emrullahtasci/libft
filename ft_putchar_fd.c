@@ -24,6 +24,6 @@ int main()
 	int fd;
 	fd = open("test.txt", O_WRONLY | O_CREAT , 0644);
 	ft_putchar_fd('a',fd);
-	close(fd)
+	close(fd);
 }
 
