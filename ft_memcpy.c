@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 18:42:31 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/07 13:18:46 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/08 23:38:41 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*d;
 	const unsigned char	*s;
 
-	if (!dest && !src)
-		return (NULL);
+	if (dest == src)
+		return (dest);
 	i = 0;
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
@@ -30,4 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-

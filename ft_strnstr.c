@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 03:34:10 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/07 16:21:41 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/08 16:32:08 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	{
 		j = 0;
 		while (little[j] && big[i + j] && i + j < len && big[i
-			+ j] == little[j])
+		+ j] == little[j])
 		{
 			j++;
 		}
