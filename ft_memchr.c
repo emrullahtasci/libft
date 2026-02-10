@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 21:26:27 by emrullah          #+#    #+#             */
-/*   Updated: 2026/02/07 14:14:34 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/10 08:26:39 by emrullah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+#include<stdio.h>
+int	main(void)
+{
+	char	data[] = {10, 20, 30, 40, 50};
+	void	*res;
+
+	res = ft_memchr(data, 30, 5);
+	printf("%d",res);
+}
+
