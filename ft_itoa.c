@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emrullah <emrullah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 16:07:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/09 18:13:01 by emrullah         ###   ########.fr       */
+/*   Updated: 2026/02/10 18:12:08 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,4 @@ char	*ft_itoa(int n)
 		nbr /= 10;
 	}
 	return (res);
-}
-#include<stdio.h>
-int main()
-{
-	int c[]=42;
-	
-	ft_itoa(c);
-	printf("%d",c);
 }

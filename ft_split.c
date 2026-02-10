@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 21:20:31 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/08 21:27:11 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/10 18:11:07 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ static size_t	count_words(const char *s, char c)
 		{
 			count++;
 			while (s[i] && s[i] != c)
+			{
 				i++;
+			}
 		}
 	}
 	return (count);
