@@ -6,7 +6,7 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 23:31:20 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/10 23:03:19 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/11 20:16:38 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*p;
 	size_t	total_size;
 
-	if (nmemb != 0 && size > (size_t)-1 / nmemb)
+	if (nmemb == 0 || size == 0)
+		return (malloc(1));
+	if (size > (size_t)-1 / nmemb)
 		return (NULL);
 	total_size = nmemb * size;
 	p = malloc(total_size);

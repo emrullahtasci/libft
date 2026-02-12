@@ -6,11 +6,10 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 16:07:44 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/10 23:03:25 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/11 18:11:10 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
 static int	num_len(long n)

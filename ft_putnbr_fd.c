@@ -6,11 +6,10 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 08:24:55 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/10 14:58:38 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/11 18:15:02 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
 #include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)

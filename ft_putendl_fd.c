@@ -6,11 +6,10 @@
 /*   By: etasci <etasci@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 08:46:01 by etasci            #+#    #+#             */
-/*   Updated: 2026/02/10 23:03:44 by etasci           ###   ########.fr       */
+/*   Updated: 2026/02/11 18:14:59 by etasci           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
 #include <unistd.h>
 
 void	ft_putendl_fd(char *s, int fd)
